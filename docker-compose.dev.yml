@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  python:
+    user: ${UID}:${GID}
+    working_dir: ${PWD}
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
